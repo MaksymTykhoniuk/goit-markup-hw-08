@@ -1,0 +1,90 @@
+.hero {
+  width: 100%;
+   max-width: 1600px;
+  padding: 118px 0;
+ 
+  
+  background-color: $bgcColor;
+  
+
+  background-image: $bgc-gradient,
+    url(../images/background/background-480@1x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+   @media (min-resolution: 2dppx), (min-resolution: 192pdi), (min-device-pixel-ratio: 2) {
+    background-image: $bgc-gradient, url(../images/background/background-480@2x.jpg);
+  }
+
+  @media (min-width: 768px) {
+    background-image: $bgc-gradient, url(../images/background/background-768@1x.jpg);
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
+      background-image: $bgc-gradient url(../images/background/background-768@2x.jpg);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image:$bgc-gradient, url(../images/background/background-1200@1x.jpg);
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
+      background-image: $bgc-gradient, url(../images/background/background-1200@2x.jpg);
+    }
+  }
+}
+
+.hero__title {
+ margin: 0 auto 30px;
+ 
+  color: $primary-White-Color;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    width: 696px;
+    
+  }
+}
+
+.hero__button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 200px;
+  padding: 10px 32px;
+
+  color: $primary-White-Color;
+  background-color: $primary-accent-color;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-accent-color;
+  }
+}
