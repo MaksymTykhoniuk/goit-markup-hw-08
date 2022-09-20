@@ -43,6 +43,8 @@
   color: $primary-black-color;
   text-decoration: none;
 
+  transition: box-shadow 250ms $time-function;
+
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -67,21 +69,17 @@
 }
 
 .galery__type {
-  color: $primary-black-color;
-  flex-grow: 1;
+  color: $primary-text-color;
+
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
-
-  &:first-child {
-    margin-bottom: 40px;
-  }
 }
 
 .galery__meta {
   border: 1px solid $button-bgc-color;
   padding: 20px 24px;
-  flex-grow:1;
+  flex-grow: 1;
 }
 
 .galery__image {
@@ -95,7 +93,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 101%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
 

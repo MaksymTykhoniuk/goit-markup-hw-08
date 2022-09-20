@@ -99,14 +99,14 @@ address {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.section--no-padding {
-  padding-top: 0;
-}
 @media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+.section--no-padding {
+  padding-top: 0;
 }
 
 .logo {
@@ -199,6 +199,14 @@ address {
   transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav {
@@ -408,7 +416,7 @@ address {
 
 .burgerMenu {
   position: absolute;
-  top: 65%;
+  top: 75%;
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -597,6 +605,7 @@ address {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    margin: 0 auto;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background/background-1200@1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-1200@1x.jpg);
   }
@@ -617,6 +626,11 @@ address {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -685,7 +699,7 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 450px;
+  min-width: 300px;
   background-color: #ffffff;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -959,9 +973,6 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -1275,11 +1286,6 @@ address {
 .address {
   margin-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
-  .address {
-    margin-right: auto;
-  }
-}
 @media screen and (min-width: 1200px) {
   .address {
     margin-right: 70px;
@@ -1336,6 +1342,24 @@ address {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 .subscribtion {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1349,6 +1373,9 @@ address {
     margin-left: auto;
   }
   .subscribtion__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1388,9 +1415,9 @@ address {
 }
 @media (min-width: 1200px) {
   .subscribtion__input {
-    display: block;
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
@@ -1453,13 +1480,6 @@ address {
       flex-wrap: wrap;
   margin-bottom: 40px;
 }
-.buttons-list__item {
-  margin-right: 8px;
-  margin-bottom: 15px;
-}
-.buttons-list__item:nth-last-child(-n+2) {
-  margin-bottom: 0;
-}
 @media screen and (min-width: 768px) {
   .buttons-list {
     -webkit-box-pack: center;
@@ -1477,6 +1497,19 @@ address {
   }
   .buttons-list__item:not(:first-child) {
     margin-left: 8px;
+  }
+}
+
+.buttons-list__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
+.buttons-list__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .buttons-list__item {
+    margin-bottom: 0;
   }
 }
 
@@ -1565,6 +1598,10 @@ address {
           flex-direction: column;
   color: #212121;
   text-decoration: none;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .galery__thumb:hover, .galery__thumb:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1587,16 +1624,10 @@ address {
 }
 
 .galery__type {
-  color: #212121;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  color: #757575;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
-}
-.galery__type:first-child {
-  margin-bottom: 40px;
 }
 
 .galery__meta {
@@ -1618,7 +1649,7 @@ address {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 101%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);

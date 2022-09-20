@@ -1,9 +1,15 @@
 .header {
   border-bottom: 1px solid $header-border-color;
   min-height: 60px;
+
   position: relative;
 
   transition: transform 300ms $time-function, opacity 300ms $time-function;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    display: flex;
+  }
 }
 
 .site-nav {
@@ -180,7 +186,7 @@
 
 .burgerMenu {
   position: absolute;
-  top: 65%;
+  top: 75%;
   right: 15px;
   transform: translateY(-50%);
 

@@ -31,7 +31,7 @@
   margin-bottom: 60px;
 
   @media screen and (min-width: 768px) {
-    margin-right: auto;
+    // margin-right: auto;
   }
 
   @media screen and (min-width: 1200px) {
@@ -93,4 +93,16 @@
   text-transform: uppercase;
 
   margin-bottom: 20px;
+}
+
+.wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
 }
