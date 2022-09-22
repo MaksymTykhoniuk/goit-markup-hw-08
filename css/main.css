@@ -712,6 +712,11 @@ address {
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
+@media screen and (min-width: 768px) {
+  .modal {
+    min-width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     min-width: 528px;
@@ -886,6 +891,12 @@ address {
   font-size: 12px;
   line-height: 1.16;
   color: #757575;
+}
+@media (min-width: 1200px) {
+  .checkbox__info {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__icon {
@@ -1512,6 +1523,12 @@ address {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .buttons-list__item {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
 
 .buttons-list__button {
   color: #212121;
@@ -1652,8 +1669,8 @@ address {
   width: 101%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -131,6 +131,11 @@
   font-size: 12px;
   line-height: 1.16;
   color: $primary-text-color;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__icon {
